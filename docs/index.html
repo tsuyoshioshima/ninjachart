@@ -1,0 +1,1221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#page-top')) {
+
+        page.querySelector('#push-start').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q01.html');
+        };
+        
+        page.querySelector('#push-staff').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-staff.html');
+        };
+
+      } else if (page.matches('#page-q01')) {
+
+        page.querySelector('#q01-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q02.html');
+        };
+
+        page.querySelector('#q01-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q14.html');
+        };
+
+      } else if (page.matches('#page-q02')) {
+
+        page.querySelector('#q02-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q03.html');
+        };
+
+        page.querySelector('#q02-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q04.html');
+        };
+
+      } else if (page.matches('#page-q03')) {
+
+        page.querySelector('#q03-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r02.html');
+        };
+
+        page.querySelector('#q03-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r01.html');
+        };
+
+      } else if (page.matches('#page-q04')) {
+
+        page.querySelector('#q04-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q05.html');
+        };
+
+        page.querySelector('#q04-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q08.html');
+        };
+
+      } else if (page.matches('#page-q05')) {
+
+        page.querySelector('#q05-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q06.html');
+        };
+
+        page.querySelector('#q05-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q08.html');
+        };
+
+      } else if (page.matches('#page-q06')) {
+
+        page.querySelector('#q06-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q07.html');
+        };
+
+        page.querySelector('#q06-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q08.html');
+        };
+
+      } else if (page.matches('#page-q07')) {
+
+        page.querySelector('#q07-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q03.html');
+        };
+
+        page.querySelector('#q07-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q11.html');
+        };
+
+      } else if (page.matches('#page-q08')) {
+
+        page.querySelector('#q08-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q09.html');
+        };
+
+        page.querySelector('#q08-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r06.html');
+        };
+
+      } else if (page.matches('#page-q09')) {
+
+        page.querySelector('#q09-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q10.html');
+        };
+
+        page.querySelector('#q09-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q07.html');
+        };
+
+      } else if (page.matches('#page-q10')) {
+
+        page.querySelector('#q10-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q07.html');
+        };
+
+        page.querySelector('#q10-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q07.html');
+        };
+
+      } else if (page.matches('#page-q11')) {
+
+        page.querySelector('#q11-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q12.html');
+        };
+
+        page.querySelector('#q11-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r03.html');
+        };
+
+      } else if (page.matches('#page-q12')) {
+
+        page.querySelector('#q12-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q13.html');
+        };
+
+        page.querySelector('#q12-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r03.html');
+        };
+
+      } else if (page.matches('#page-q13')) {
+
+        page.querySelector('#q13-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r02.html');
+        };
+
+        page.querySelector('#q13-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r01.html');
+        };
+
+      } else if (page.matches('#page-q14')) {
+
+        page.querySelector('#q14-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q15.html');
+        };
+
+        page.querySelector('#q14-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q16.html');
+        };
+
+      } else if (page.matches('#page-q15')) {
+
+        page.querySelector('#q15-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r04.html');
+        };
+
+        page.querySelector('#q15-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q16.html');
+        };
+
+      } else if (page.matches('#page-q16')) {
+
+        page.querySelector('#q16-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q17.html');
+        };
+
+        page.querySelector('#q16-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q22.html');
+        };
+
+        page.querySelector('#q16-soso').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q25.html');
+        };
+
+      } else if (page.matches('#page-q17')) {
+
+        page.querySelector('#q17-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r05.html');
+        };
+
+        page.querySelector('#q17-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q18.html');
+        };
+
+      } else if (page.matches('#page-q18')) {
+
+        page.querySelector('#q18-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r11.html');
+        };
+
+        page.querySelector('#q18-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q19.html');
+        };
+
+      } else if (page.matches('#page-q19')) {
+
+        page.querySelector('#q19-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q20.html');
+        };
+
+        page.querySelector('#q19-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r10.html');
+        };
+
+      } else if (page.matches('#page-q20')) {
+
+        page.querySelector('#q20-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r01.html');
+        };
+
+        page.querySelector('#q20-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q21.html');
+        };
+
+      } else if (page.matches('#page-q21')) {
+
+        page.querySelector('#q21-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r11.html');
+        };
+
+        page.querySelector('#q21-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q12.html');
+        };
+
+      } else if (page.matches('#page-q22')) {
+
+        page.querySelector('#q22-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r07.html');
+        };
+
+        page.querySelector('#q22-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q23.html');
+        };
+
+      } else if (page.matches('#page-q23')) {
+
+        page.querySelector('#q23-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q24.html');
+        };
+
+        page.querySelector('#q23-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r08.html');
+        };
+
+      } else if (page.matches('#page-q24')) {
+
+        page.querySelector('#q24-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r08.html');
+        };
+
+        page.querySelector('#q24-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r09.html');
+        };
+
+      } else if (page.matches('#page-q25')) {
+
+        page.querySelector('#q25-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q26.html');
+        };
+
+        page.querySelector('#q25-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q32.html');
+        };
+
+      } else if (page.matches('#page-q26')) {
+
+        page.querySelector('#q26-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q27.html');
+        };
+
+        page.querySelector('#q26-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q32.html');
+        };
+
+        page.querySelector('#q26-soso').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r12.html');
+        };
+
+      } else if (page.matches('#page-q27')) {
+
+        page.querySelector('#q27-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q28.html');
+        };
+
+        page.querySelector('#q27-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r14.html');
+        };
+
+        page.querySelector('#q27-soso').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r17.html');
+        };
+
+      } else if (page.matches('#page-q28')) {
+
+        page.querySelector('#q28-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q30.html');
+        };
+
+        page.querySelector('#q28-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q29.html');
+        };
+
+      } else if (page.matches('#page-q29')) {
+
+        page.querySelector('#q29-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r16.html');
+        };
+
+        page.querySelector('#q29-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q31.html');
+        };
+
+      } else if (page.matches('#page-q30')) {
+
+        page.querySelector('#q30-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-q29.html');
+        };
+
+        page.querySelector('#q30-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r15.html');
+        };
+
+        page.querySelector('#q30-soso').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r14.html');
+        };
+
+      } else if (page.matches('#page-q31')) {
+
+        page.querySelector('#q31-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r16.html');
+        };
+
+        page.querySelector('#q31-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r17.html');
+        };
+
+      } else if (page.matches('#page-q32')) {
+
+        page.querySelector('#q32-yes').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r14.html');
+        };
+
+        page.querySelector('#q32-no').onclick = function() {
+          document.querySelector('#navigator').pushPage('page-r13.html');
+        };
+
+      } else if (page.matches('#page-r01')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r02')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r03')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+        
+      } else if (page.matches('#page-r04')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r05')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r06')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r07')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r08')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r09')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r10')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r11')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r12')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r13')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r14')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r15')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r16')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      } else if (page.matches('#page-r17')) {
+
+        page.querySelector('#reset-top').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page-top.html');
+        };
+
+      }
+
+   });
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="page-top.html"></ons-navigator>
+
+  <ons-template id="page-top.html">
+    <ons-page id="page-top">
+      <ons-toolbar>
+        <div class="center">CoderDojo</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <img src="./img/dojoLogo.png" width="150px">
+        <p>まよえるニンジャのための<br>やりたいことさがし</p>
+        <div>
+            <ons-button id="push-start">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i> はじめる
+            </ons-button>
+        </div>
+        <br>
+        <div>
+            <ons-button class="button button--outline" id="push-staff">
+                <i class="fa fa-info" aria-hidden="true"></i> つくった人
+            </ons-button>
+        </div>
+      </div>
+    </ons-page>
+  </ons-template>
+  
+  <ons-template id="page-staff.html">
+    <ons-page id="page-staff">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+        <div class="center">つくった人の一覧</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>つくった人の名前</p>
+      </div>
+    </ons-page>
+  </ons-template>
+  
+  <ons-template id="page-q01.html">
+    <ons-page id="page-q01">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>具体的に作りたいものはありますか？</p>
+        <div><ons-button id="q01-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q01-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q02.html">
+    <ons-page id="page-q02">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>すでに作り始めていますか？</p>
+        <div><ons-button id="q02-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q02-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q03.html">
+    <ons-page id="page-q03">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>行き詰まっているところ、きになるところはありますか？</p>
+        <div><ons-button id="q03-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q03-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q04.html">
+    <ons-page id="page-q04">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作品の全体像と作品を構成する部品などをイメージすることができていますか？</p>
+        <div><ons-button id="q04-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q04-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q05.html">
+    <ons-page id="page-q05">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>そもそも作品を実装するための手段、作るための道具を決めていますか？（プログラミング言語、開発環境、機材など）</p>
+        <div><ons-button id="q05-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q05-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q06.html">
+    <ons-page id="page-q06">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作品を作るために必要な道具の使い方を把握していますか？</p>
+        <div><ons-button id="q06-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q06-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q07.html">
+    <ons-page id="page-q07">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>資料を参照しながらでもいいので、制作を進めることができそうですか？</p>
+        <div><ons-button id="q07-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q07-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q08.html">
+    <ons-page id="page-q08">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作品の全体設計は終わっていますか？（設計書を作りましたか？）</p>
+        <div><ons-button id="q08-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q08-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q09.html">
+    <ons-page id="page-q09">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作品の実装に活用できそうなものをイメージできていますか？</p>
+        <div><ons-button id="q09-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q09-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q10.html">
+    <ons-page id="page-q10">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>それを使うのではダメですか？</p>
+        <div><ons-button id="q10-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q10-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q11.html">
+    <ons-page id="page-q11">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作りたいものの全体構造を機能単位に分けて設計することはできましたか？</p>
+        <div><ons-button id="q11-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q11-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q12.html">
+    <ons-page id="page-q12">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>機能単位で作れる部分はありますか？</p>
+        <div><ons-button id="q12-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q12-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q13.html">
+    <ons-page id="page-q13">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作れる部分は作り終わりましたか？</p>
+        <div><ons-button id="q13-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q13-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q14.html">
+    <ons-page id="page-q14">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>何かしらの練習課題を与えられていますか？</p>
+        <div><ons-button id="q14-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q14-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q15.html">
+    <ons-page id="page-q15">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>今日はその課題、あるいは続きをやるのはどうですか？</p>
+        <div><ons-button id="q15-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q15-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q16.html">
+    <ons-page id="page-q16">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>新しいことがしたいですか？　何かオリジナル作品を作りたいですか？</p>
+        <div><ons-button id="q16-yes">作りたい</ons-button></div>
+        <br>
+        <div><ons-button id="q16-no" class="button button--outline">特にない</ons-button></div>
+        <br>
+        <div><ons-button id="q16-soso" class="button button--outline">よくわからない</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q17.html">
+    <ons-page id="page-q17">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>作品作りに参考にしたいものはありますか？</p>
+        <div><ons-button id="q17-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q17-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q18.html">
+    <ons-page id="page-q18">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>こつこつ学ぶことと、やりたいことを中心に実践を重ねていくこと、どちらが向いていますか？</p>
+        <div><ons-button id="q18-yes">こつこつ学ぶこと</ons-button></div>
+        <br>
+        <div><ons-button id="q18-no" class="button button--outline">やりたいこと</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q19.html">
+    <ons-page id="page-q19">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>やりたいことの作り方は調べましたか？</p>
+        <div><ons-button id="q19-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q19-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q20.html">
+    <ons-page id="page-q20">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>調べた結果、作り方は理解できましたか？</p>
+        <div><ons-button id="q20-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q20-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q21.html">
+    <ons-page id="page-q21">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>難しそうでしたか？</p>
+        <div><ons-button id="q21-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q21-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q22.html">
+    <ons-page id="page-q22">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>過去に取り組んだ課題は簡単にクリアできますか？</p>
+        <div><ons-button id="q22-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q22-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q23.html">
+    <ons-page id="page-q23">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>他の教材を試したりはしましたか？</p>
+        <div><ons-button id="q23-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q23-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q24.html">
+    <ons-page id="page-q24">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>今日は自分から参加したくて来てくれましたか？</p>
+        <div><ons-button id="q24-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q24-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q25.html">
+    <ons-page id="page-q25">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>キーボード入力がたくさんあるようなものに挑戦してみたいですか？</p>
+        <div><ons-button id="q25-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q25-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q26.html">
+    <ons-page id="page-q26">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>キーボード入力は１分間に120文字程度できますか？</p>
+        <div><ons-button id="q26-yes">たぶん</ons-button></div>
+        <br>
+        <div><ons-button id="q26-no" class="button button--outline">わからない</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q27.html">
+    <ons-page id="page-q27">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>HTML / CSS は退屈ですか？</p>
+        <div><ons-button id="q27-yes">退屈！！</ons-button></div>
+        <br>
+        <div><ons-button id="q27-no" class="button button--outline">できない</ons-button></div>
+        <br>
+        <div><ons-button id="q27-soso" class="button button--outline">わからない</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q28.html">
+    <ons-page id="page-q28">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>参考書や画面の説明を見ながら作業を進めることに抵抗はありますか？</p>
+        <div><ons-button id="q28-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q28-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q29.html">
+    <ons-page id="page-q29">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>簡単な英文を読むことに抵抗はない？</p>
+        <div><ons-button id="q29-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q29-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q30.html">
+    <ons-page id="page-q30">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>説明を読んだり聞いたりするのが苦手だと、色々と不都合がでるけど大丈夫ですか？</p>
+        <div><ons-button id="q30-yes">はい／頑張る</ons-button></div>
+        <br>
+        <div><ons-button id="q30-no" class="button button--outline">いいえ</ons-button></div>
+        <br>
+        <div><ons-button id="q30-soso" class="button button--outline">わからない</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q31.html">
+    <ons-page id="page-q31">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>翻訳ソフトを使えば英文も読めますか？</p>
+        <div><ons-button id="q31-yes">はい／たぶん</ons-button></div>
+        <br>
+        <div><ons-button id="q31-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-q32.html">
+    <ons-page id="page-q32">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>マウス操作は大丈夫そうですか？</p>
+        <div><ons-button id="q32-yes">はい</ons-button></div>
+        <br>
+        <div><ons-button id="q32-no" class="button button--outline">いいえ</ons-button></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r01.html">
+    <ons-page id="page-r01">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>どんどんつくろう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+  
+  <ons-template id="page-r02.html">
+    <ons-page id="page-r02">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>仲間やメンターに相談しながらすすめよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r03.html">
+    <ons-page id="page-r03">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>いまの実力でできることから先に取り組もう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r04.html">
+    <ons-page id="page-r04">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>それで行こう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r05.html">
+    <ons-page id="page-r05">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>その作品を模写するなり参考にして作品を作ろう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+  <ons-template id="page-r06.html">
+    <ons-page id="page-r06">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>まずは作りたいものの全体図を見える化してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r07.html">
+    <ons-page id="page-r07">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>今日はまず過去の成果をメンターに見せてみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+  <ons-template id="page-r08.html">
+    <ons-page id="page-r08">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>試していない教材を試してみたり、読んでいない参考書を読んでみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r09.html">
+    <ons-page id="page-r09">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>やる気が少しでもあるときにまた来てね！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+  <ons-template id="page-r10.html">
+    <ons-page id="page-r10">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>まずは作り方を調べてみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r11.html">
+    <ons-page id="page-r11">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>道具の使い方の入門書、学習サイトを活用して勉強してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+  <ons-template id="page-r12.html">
+    <ons-page id="page-r12">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>まずはタイピングテストに挑戦してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r13.html">
+    <ons-page id="page-r13">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>タブレット端末で Code.org、The Foos、lightbot、Viscuit、Scratch.Jr などに挑戦しよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r14.html">
+    <ons-page id="page-r14">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>まずは Scratch や Code.org に挑戦してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r15.html">
+    <ons-page id="page-r15">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>保護者の付き添いがないなら対応不可</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page-r16.html">
+    <ons-page id="page-r16">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>JavaScript や Processing などに挑戦してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+  <ons-template id="page-r17.html">
+    <ons-page id="page-r17">
+      <ons-toolbar>
+        <div class="center">結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>まずは HTML / CSS に挑戦してみよう！</p>
+        <ons-button id="reset-top">最初にもどる</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+    
+</body>
+</html>
